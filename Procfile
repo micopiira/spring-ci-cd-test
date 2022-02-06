@@ -1,1 +1,1 @@
-web: ./mvnw spring-boot:run -Dspring-boot.run.arguments=--server.port=$PORT
+web: java -Dserver.port=$PORT -jar target/demo-*.jar
