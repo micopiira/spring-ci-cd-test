@@ -29,5 +29,6 @@ jobs:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         HEROKU_DEBUG: 1
       run: |
+        heroku apps:info -a spring-ci-cd-test
         heroku plugins:install java
         heroku deploy:jar target/spring-ci-cd-test-*.jar --app spring-ci-cd-test
